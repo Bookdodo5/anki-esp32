@@ -1,7 +1,6 @@
 const express = require('express');
 const errorHandler = require('../functions/middleware/errorHandler');
 const dotenv = require('dotenv').config();
-const serverless = require('serverless-http');
 const connectDb = require('../functions/config/dbConnection');
 
 connectDb();
