@@ -12,7 +12,8 @@ app.use(express.json());
 app.get("/", (req, res) => {
     res.send("Hello World");
 });
-app.use("/api", require("../functions/routes/wordRoutes"));
+app.use("/api/words", require("../functions/routes/wordRoutes"));
+app.use("/api/users", require("../functions/routes/userRoutes"));
 app.use(errorHandler)
 
 app.listen(port, () => {
