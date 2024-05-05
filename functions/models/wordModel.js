@@ -37,6 +37,10 @@ const wordSchema = mongoose.Schema({
     reviewInterval: {
         type: Number,
         required: [true, "Please add a review interval for this word!"]
+    },
+    shouldBeReviewed: {
+        type: Boolean,
+        required: [false, "This will not be added to the database."]
     }
 }, {
     timestamps: true,

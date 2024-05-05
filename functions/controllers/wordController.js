@@ -75,6 +75,8 @@ const getNextReview = asyncHandler(async (req,res) => {
     words.sort((a,b) => {
         return a.nextReview - b.nextReview;
     });
+
+    words[0].shouldBeReviewed = (words[0].nextReview <= Date.now()) || words[0].reviewInterval <= 1;
     res.status(200).json(words[0]);
 })
 
