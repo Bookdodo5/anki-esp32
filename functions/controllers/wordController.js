@@ -110,7 +110,7 @@ const updateReviewInterval = asyncHandler(async (req,res) => {
     word.nextReview = Date.now() + (intervalTime[word.reviewInterval]*1000*60);
     word.lastReviewed = Date.now();
 
-    const newInterval = await Word.findByIdAndUpdate(word.id, {word}, {new: true})
+    const newInterval = await Word.findByIdAndUpdate(word.id, word, {new: true})
 
     res.status(200).json(newInterval);
 })
