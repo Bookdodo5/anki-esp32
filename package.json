@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "netlify-lambda serve src",
     "dev": "nodemon src\\server.js",
-    "build": "netlify deploy --prod"
+    "build": "netlify deploy --prod",
+    "vercel-build": "echo hello"
   },
   "engines": {
     "node": "18.x"
