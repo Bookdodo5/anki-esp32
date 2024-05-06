@@ -21,7 +21,8 @@ const getWord = asyncHandler(async (req,res) => {
 })
 
 const addWord = asyncHandler(async (req,res) => {
-    const {word,sentence,meaning,context} = req.body;
+    let {word,sentence,meaning,context} = req.body;
+    word = word.toLowerCase();
     res.status(400);
     if(!word) throw new Error('Word is required');
     if(!sentence) throw new Error('Sentence is required');
@@ -136,4 +137,13 @@ const foundInContext = asyncHandler(async (req,res) => {
     res.status(200).json(updatedWord);
 })
 
-module.exports = {getWords, getWord, addWord, updateWord, deleteWord, getNextReview, updateReviewInterval, foundInContext};
+const findWord = asyncHandler(async (req,res) => {
+
+    res.status(404);
+    let word = await Word.findOne({word: req.params.word.toLowerCase()});
+    if(!word) throw new Error('Word not found');
+
+    res.status(200).json(word);
+})
+
+module.exports = {getWords, getWord, addWord, updateWord, deleteWord, getNextReview, updateReviewInterval, foundInContext, findWord};
