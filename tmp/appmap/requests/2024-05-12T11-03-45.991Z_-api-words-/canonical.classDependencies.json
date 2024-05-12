@@ -1,0 +1,6 @@
+[
+  {
+    "caller": "PUT /",
+    "callee": "mongodb/words"
+  }
+]

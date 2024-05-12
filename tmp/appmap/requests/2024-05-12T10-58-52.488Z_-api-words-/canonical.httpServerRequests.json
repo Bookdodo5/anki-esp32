@@ -1,0 +1,7 @@
+[
+  {
+    "route": "PUT /",
+    "parameters": "(word,sentence,context)",
+    "status": 200
+  }
+]

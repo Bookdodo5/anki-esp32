@@ -1,0 +1,355 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/api/words/review",
+        "request_method": "PUT",
+        "headers": {
+          "Accept": "*/*",
+          "Content-Type": "application/json",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEiLCJlbWFpbCI6ImJvb2tkb2RvMUBnbWFpbC5jb20iLCJpZCI6IjY2MzY0ZTEwZjE5MzdkMDZkMTBkOWZlYSIsImlhdCI6MTcxNTUxMTQyMn0.9ExSuTjtIEe376Y_mId_cSLHAN3-CDx5_nhrO6hEm1A",
+          "Cache-Control": "no-cache",
+          "User-Agent": "Flashpost",
+          "Accept-Encoding": "gzip, deflate",
+          "Connection": "keep-alive",
+          "Content-Length": "33",
+          "Host": "localhost:5001"
+        },
+        "protocol": "HTTP/1.1",
+        "normalized_path_info": "/review"
+      },
+      "id": 1,
+      "thread_id": 0,
+      "message": [
+        {
+          "name": "reviewResult",
+          "class": "String",
+          "value": "'normal'"
+        }
+      ]
+    },
+    {
+      "event": "call",
+      "id": 2,
+      "thread_id": 0,
+      "method_id": "find",
+      "static": false,
+      "receiver": {
+        "class": "Collection",
+        "value": "[Collection words]",
+        "object_id": 12
+      },
+      "parameters": [
+        {
+          "class": "Object",
+          "properties": [
+            {
+              "name": "user_id",
+              "class": "ObjectId"
+            }
+          ],
+          "value": "{ user_id: ObjectId { buffer: [Buffer [Uint8Array]] } }",
+          "object_id": 30,
+          "name": "filter"
+        },
+        {
+          "class": "Object",
+          "properties": [],
+          "value": "{}",
+          "object_id": 31,
+          "name": "options"
+        }
+      ],
+      "defined_class": "words",
+      "lineno": 4,
+      "path": "mongodb/words"
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 3,
+      "parent_id": 2,
+      "return_value": {
+        "class": "FindCursor",
+        "value": "[FindCursor anki-esp32-backend.words]",
+        "object_id": 32
+      },
+      "elapsed": 0.00011979999908362515
+    },
+    {
+      "event": "call",
+      "id": 4,
+      "thread_id": 0,
+      "method_id": "findOneAndUpdate",
+      "static": false,
+      "receiver": {
+        "class": "Collection",
+        "value": "[Collection words]",
+        "object_id": 12
+      },
+      "parameters": [
+        {
+          "class": "Object",
+          "properties": [
+            {
+              "name": "_id",
+              "class": "ObjectId"
+            }
+          ],
+          "value": "{ _id: ObjectId { buffer: [Buffer [Uint8Array]] } }",
+          "object_id": 33,
+          "name": "filter"
+        },
+        {
+          "class": "Object",
+          "properties": [
+            {
+              "name": "$setOnInsert",
+              "class": "Object",
+              "properties": [
+                {
+                  "name": "createdAt",
+                  "class": "Date"
+                }
+              ]
+            },
+            {
+              "name": "$set",
+              "class": "Object",
+              "properties": [
+                {
+                  "name": "updatedAt",
+                  "class": "Date"
+                },
+                {
+                  "name": "__v",
+                  "class": "Number"
+                },
+                {
+                  "name": "reviewInterval",
+                  "class": "Number"
+                },
+                {
+                  "name": "nextReview",
+                  "class": "Date"
+                },
+                {
+                  "name": "lastReviewed",
+                  "class": "Date"
+                },
+                {
+                  "name": "context",
+                  "class": "Array",
+                  "items": {
+                    "class": "String"
+                  }
+                },
+                {
+                  "name": "lastSeenInContext",
+                  "class": "Date"
+                },
+                {
+                  "name": "meaning",
+                  "class": "String"
+                },
+                {
+                  "name": "sentence",
+                  "class": "Array",
+                  "items": {
+                    "class": "String"
+                  }
+                },
+                {
+                  "name": "word",
+                  "class": "String"
+                },
+                {
+                  "name": "user_id",
+                  "class": "ObjectId"
+                },
+                {
+                  "name": "_id",
+                  "class": "ObjectId"
+                }
+              ]
+            }
+          ],
+          "value": "{\n  '$setOnInsert': { createdAt: 2024-05-12T10:58:15.381Z },\n  '$set': {\n    updatedAt: 2024-05-12T10:58:15.381Z,\n    __v: 0,\n    reviewInterval: 5,\n    nextReview: 2024-05-15T10:58:15.378Z,\n    lastReviewed: 2024-05-12T10:58:15.378Z,\n    context: [Array],\n    lastSeenInContext: 2024-05-12T07:35:17.236Z,\n    meaning: 'go hurriedly through (a place) stealing things and causing damage.',\n    sentence: [Array],\n    word: 'ransack',\n    user_id: [ObjectId],\n    _id: [ObjectId]\n  }\n}",
+          "object_id": 34,
+          "name": "update"
+        },
+        {
+          "class": "Object",
+          "properties": [
+            {
+              "name": "returnDocument",
+              "class": "String"
+            },
+            {
+              "name": "returnOriginal",
+              "class": "Boolean"
+            }
+          ],
+          "value": "{ returnDocument: 'after', returnOriginal: false }",
+          "object_id": 35,
+          "name": "options"
+        }
+      ],
+      "defined_class": "words",
+      "lineno": 6,
+      "path": "mongodb/words"
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 5,
+      "parent_id": 4,
+      "return_value": {
+        "class": "Promise<Object>",
+        "value": "Promise {\n  {\n    _id: new ObjectId('664037c834bf5965e3639c4c'),\n    user_id: new ObjectId('66364e10f1937d06d10d9fea'),\n    word: 'ransack',\n    sentence: [\n      'At the start of the season when I ransacked myself and I thought about what I want to play this season,',\n      'Ransack will help you easily add searching to your Rails application, without any additional dependencies.'\n    ],\n    meaning: 'go hurriedly through (a place) stealing things and causing damage.',\n    lastSeenInContext: 2024-05-12T07:35:17.236Z,\n    context: [\n      'https://youtu.be/8B340q4B4WU?t=256',\n      'https://www.google.com/search?q=randsack&oq=ran&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDkyBggCEEUYOzIGCAMQRRg5MgYIBBBFGDwyBggFEEUYPDIGCAYQLhhA0gEIMjE3MmowajGoAgCwAgA&sourceid=chrome&ie=UTF-8'\n    ],\n    lastReviewed: 2024-05-12T10:58:15.378Z,\n    nextReview: 2024-05-15T10:58:15.378Z,\n    reviewInterval: 5,\n    createdAt: 2024-05-12T03:30:16.166Z,\n    updatedAt: 2024-05-12T10:58:15.381Z,\n    __v: 0\n  }\n}",
+        "object_id": 36
+      },
+      "elapsed": 0.04668899999887799
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "X-Powered-By": "Express",
+          "Access-Control-Allow-Origin": "http://localhost:5173",
+          "Vary": "Origin",
+          "Access-Control-Allow-Credentials": "true",
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "881",
+          "Etag": "W/\"371-oMCFI8JQldI8ULmnrfChHiUetUc\""
+        },
+        "return_value": {
+          "class": "Object",
+          "properties": [
+            {
+              "name": "_id",
+              "class": "String"
+            },
+            {
+              "name": "user_id",
+              "class": "String"
+            },
+            {
+              "name": "word",
+              "class": "String"
+            },
+            {
+              "name": "sentence",
+              "class": "Array",
+              "items": {
+                "class": "String"
+              }
+            },
+            {
+              "name": "meaning",
+              "class": "String"
+            },
+            {
+              "name": "lastSeenInContext",
+              "class": "String"
+            },
+            {
+              "name": "context",
+              "class": "Array",
+              "items": {
+                "class": "String"
+              }
+            },
+            {
+              "name": "lastReviewed",
+              "class": "String"
+            },
+            {
+              "name": "nextReview",
+              "class": "String"
+            },
+            {
+              "name": "reviewInterval",
+              "class": "Number"
+            },
+            {
+              "name": "createdAt",
+              "class": "String"
+            },
+            {
+              "name": "updatedAt",
+              "class": "String"
+            },
+            {
+              "name": "__v",
+              "class": "Number"
+            }
+          ],
+          "value": "{\n  _id: '664037c834bf5965e3639c4c',\n  user_id: '66364e10f1937d06d10d9fea',\n  word: 'ransack',\n  sentence: [\n    'At the start of the season when I ransacked myself and I thought about what I want to play this season,',\n    'Ransack will help you easily add searching to your Rails application, without any additional dependencies.'\n  ],\n  meaning: 'go hurriedly through (a place) stealing things and causing damage.',\n  lastSeenInContext: '2024-05-12T07:35:17.236Z',\n  context: [\n    'https://youtu.be/8B340q4B4WU?t=256',\n    'https://www.google.com/search?q=randsack&oq=ran&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDkyBggCEEUYOzIGCAMQRRg5MgYIBBBFGDwyBggFEEUYPDIGCAYQLhhA0gEIMjE3MmowajGoAgCwAgA&sourceid=chrome&ie=UTF-8'\n  ],\n  lastReviewed: '2024-05-12T10:58:15.378Z',\n  nextReview: '2024-05-15T10:58:15.378Z',\n  reviewInterval: 5,\n  createdAt: '2024-05-12T03:30:16.166Z',\n  updatedAt: '2024-05-12T10:58:15.381Z',\n  __v: 0\n}",
+          "object_id": 37
+        }
+      },
+      "id": 6,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 0.1473571999995329
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.21.1",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v18.16.0"
+    },
+    "app": "backend-api",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "PUT /api/words/review (200) — 2024-05-12T10:58:15.289Z"
+  },
+  "classMap": [
+    {
+      "name": "mongodb",
+      "type": "package",
+      "children": [
+        {
+          "type": "class",
+          "name": "words",
+          "children": [
+            {
+              "type": "function",
+              "name": "find",
+              "static": false,
+              "location": "mongodb/words:4"
+            },
+            {
+              "type": "function",
+              "name": "findOneAndUpdate",
+              "static": false,
+              "location": "mongodb/words:6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "PUT /review"
+        }
+      ]
+    }
+  ]
+}

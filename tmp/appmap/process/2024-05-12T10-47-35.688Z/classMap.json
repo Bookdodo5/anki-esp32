@@ -1,0 +1,20 @@
+[
+  {
+    "name": "config",
+    "type": "package",
+    "children": [
+      {
+        "type": "class",
+        "name": "dbConnection",
+        "children": [
+          {
+            "type": "function",
+            "name": "connectDb",
+            "static": true,
+            "location": "functions\\config\\dbConnection.js:3"
+          }
+        ]
+      }
+    ]
+  }
+]

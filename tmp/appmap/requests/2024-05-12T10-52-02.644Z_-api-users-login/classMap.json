@@ -1,0 +1,30 @@
+[
+  {
+    "name": "middleware",
+    "type": "package",
+    "children": [
+      {
+        "type": "class",
+        "name": "errorHandler",
+        "children": [
+          {
+            "type": "function",
+            "name": "errorHandler",
+            "static": true,
+            "location": "functions\\middleware\\errorHandler.js:3"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "http",
+    "name": "HTTP server requests",
+    "children": [
+      {
+        "type": "route",
+        "name": "GET /api/users/login"
+      }
+    ]
+  }
+]

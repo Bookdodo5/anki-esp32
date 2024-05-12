@@ -1,0 +1,9 @@
+[
+  {
+    "class": "TypeError",
+    "message": "res.json is not a function",
+    "stack": [
+      "functions\\middleware\\errorHandler.js:3"
+    ]
+  }
+]

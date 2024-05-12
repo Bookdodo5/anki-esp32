@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /search/:word",
+    "parameters": "(word,email,password)",
+    "status": 200
+  }
+]

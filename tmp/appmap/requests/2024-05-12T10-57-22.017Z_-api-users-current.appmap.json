@@ -1,0 +1,111 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/api/users/current",
+        "request_method": "GET",
+        "headers": {
+          "Accept": "*/*",
+          "Content-Type": "application/json",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEiLCJlbWFpbCI6ImJvb2tkb2RvMUBnbWFpbC5jb20iLCJpZCI6IjY2MzY0ZTEwZjE5MzdkMDZkMTBkOWZlYSIsImlhdCI6MTcxNTUxMTQyMn0.9ExSuTjtIEe376Y_mId_cSLHAN3-CDx5_nhrO6hEm1A",
+          "Cache-Control": "no-cache",
+          "User-Agent": "Flashpost",
+          "Accept-Encoding": "gzip, deflate",
+          "Connection": "keep-alive",
+          "Content-Length": "60",
+          "Host": "localhost:5001"
+        },
+        "protocol": "HTTP/1.1",
+        "normalized_path_info": "/current"
+      },
+      "id": 1,
+      "thread_id": 0,
+      "message": [
+        {
+          "name": "email",
+          "class": "String",
+          "value": "'bookdodo1@gmail.com'"
+        },
+        {
+          "name": "password",
+          "class": "String",
+          "value": "'1'"
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "X-Powered-By": "Express",
+          "Access-Control-Allow-Origin": "http://localhost:5173",
+          "Vary": "Origin",
+          "Access-Control-Allow-Credentials": "true",
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "95",
+          "Etag": "W/\"5f-903zqRkzAwNYjBn24uR+Xhfix3o\""
+        },
+        "return_value": {
+          "class": "Object",
+          "properties": [
+            {
+              "name": "username",
+              "class": "String"
+            },
+            {
+              "name": "email",
+              "class": "String"
+            },
+            {
+              "name": "id",
+              "class": "String"
+            },
+            {
+              "name": "iat",
+              "class": "Number"
+            }
+          ],
+          "value": "{\n  username: '1',\n  email: 'bookdodo1@gmail.com',\n  id: '66364e10f1937d06d10d9fea',\n  iat: 1715511422\n}",
+          "object_id": 11
+        }
+      },
+      "id": 2,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 0.009089500003028661
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.21.1",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v18.16.0"
+    },
+    "app": "backend-api",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "GET /api/users/current (200) — 2024-05-12T10:57:22.017Z"
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /current"
+        }
+      ]
+    }
+  ]
+}

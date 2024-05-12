@@ -1,0 +1,6 @@
+[
+  {
+    "caller": "GET /api/users/login",
+    "callee": "middleware/errorHandler"
+  }
+]

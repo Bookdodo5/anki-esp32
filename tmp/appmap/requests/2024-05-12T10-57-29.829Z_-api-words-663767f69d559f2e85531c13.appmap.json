@@ -1,0 +1,278 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/api/words/663767f69d559f2e85531c13",
+        "request_method": "GET",
+        "headers": {
+          "Accept": "*/*",
+          "Content-Type": "application/json",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEiLCJlbWFpbCI6ImJvb2tkb2RvMUBnbWFpbC5jb20iLCJpZCI6IjY2MzY0ZTEwZjE5MzdkMDZkMTBkOWZlYSIsImlhdCI6MTcxNTUxMTQyMn0.9ExSuTjtIEe376Y_mId_cSLHAN3-CDx5_nhrO6hEm1A",
+          "Cache-Control": "no-cache",
+          "User-Agent": "Flashpost",
+          "Accept-Encoding": "gzip, deflate",
+          "Connection": "keep-alive",
+          "Content-Length": "60",
+          "Host": "localhost:5001"
+        },
+        "protocol": "HTTP/1.1",
+        "normalized_path_info": "/:id"
+      },
+      "id": 1,
+      "thread_id": 0,
+      "message": [
+        {
+          "name": "id",
+          "class": "String",
+          "value": "'663767f69d559f2e85531c13'"
+        },
+        {
+          "name": "email",
+          "class": "String",
+          "value": "'bookdodo1@gmail.com'"
+        },
+        {
+          "name": "password",
+          "class": "String",
+          "value": "'1'"
+        }
+      ]
+    },
+    {
+      "event": "call",
+      "id": 2,
+      "thread_id": 0,
+      "method_id": "findOne",
+      "static": false,
+      "receiver": {
+        "class": "Collection",
+        "value": "[Collection words]",
+        "object_id": 12
+      },
+      "parameters": [
+        {
+          "class": "Object",
+          "properties": [
+            {
+              "name": "_id",
+              "class": "ObjectId"
+            }
+          ],
+          "value": "{ _id: ObjectId { buffer: [Buffer [Uint8Array]] } }",
+          "object_id": 16,
+          "name": "filter"
+        },
+        {
+          "class": "Object",
+          "properties": [],
+          "value": "{}",
+          "object_id": 17,
+          "name": "options"
+        }
+      ],
+      "defined_class": "words",
+      "lineno": 5,
+      "path": "mongodb/words"
+    },
+    {
+      "event": "call",
+      "id": 3,
+      "thread_id": 0,
+      "method_id": "find",
+      "static": false,
+      "receiver": {
+        "class": "Collection",
+        "value": "[Collection words]",
+        "object_id": 12
+      },
+      "parameters": [
+        {
+          "class": "Object",
+          "properties": [
+            {
+              "name": "_id",
+              "class": "ObjectId"
+            }
+          ],
+          "value": "{ _id: ObjectId { buffer: [Buffer [Uint8Array]] } }",
+          "object_id": 16,
+          "name": "filter"
+        },
+        {
+          "class": "Object",
+          "properties": [],
+          "value": "{}",
+          "object_id": 17,
+          "name": "options"
+        }
+      ],
+      "defined_class": "words",
+      "lineno": 4,
+      "path": "mongodb/words"
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 4,
+      "parent_id": 3,
+      "return_value": {
+        "class": "FindCursor",
+        "value": "[FindCursor anki-esp32-backend.words]",
+        "object_id": 18
+      },
+      "elapsed": 0.00047199999971780926
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 5,
+      "parent_id": 2,
+      "return_value": {
+        "class": "Promise<Object>",
+        "value": "Promise {\n  {\n    _id: new ObjectId('663767f69d559f2e85531c13'),\n    user_id: new ObjectId('66364e10f1937d06d10d9fea'),\n    word: 'aberrant',\n    sentence: [\n      'His aberrant behavior at the party shocked everyone.',\n      'aberration is for the weak',\n      'Wokie aberration kaii kawa eagjdpomp afm okdmf aokfa hr h',\n      'sg sd gerd gs s ',\n      'New Sentence'\n    ],\n    meaning: 'departing from an accepted standard',\n    lastSeenInContext: 2024-05-10T19:07:53.138Z,\n    context: [\n      'ChatGPT',\n      'woke.wokiewokie',\n      'enthgofka.gohkodp.co.th asogmr maspf,s gh g',\n      ' d dg ',\n      'New Context'\n    ],\n    lastReviewed: 2024-05-09T11:38:00.247Z,\n    nextReview: 2024-05-16T11:38:00.247Z,\n    reviewInterval: 6,\n    createdAt: 2024-05-05T11:05:26.253Z,\n    updatedAt: 2024-05-10T19:07:53.138Z,\n    __v: 0\n  }\n}",
+        "object_id": 19
+      },
+      "elapsed": 0.038611399999354035
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "X-Powered-By": "Express",
+          "Access-Control-Allow-Origin": "http://localhost:5173",
+          "Vary": "Origin",
+          "Access-Control-Allow-Credentials": "true",
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "671",
+          "Etag": "W/\"29f-ijeJqqctaiE9u0XGsEBDhpo74KA\""
+        },
+        "return_value": {
+          "class": "Object",
+          "properties": [
+            {
+              "name": "_id",
+              "class": "String"
+            },
+            {
+              "name": "user_id",
+              "class": "String"
+            },
+            {
+              "name": "word",
+              "class": "String"
+            },
+            {
+              "name": "sentence",
+              "class": "Array",
+              "items": {
+                "class": "String"
+              }
+            },
+            {
+              "name": "meaning",
+              "class": "String"
+            },
+            {
+              "name": "lastSeenInContext",
+              "class": "String"
+            },
+            {
+              "name": "context",
+              "class": "Array",
+              "items": {
+                "class": "String"
+              }
+            },
+            {
+              "name": "lastReviewed",
+              "class": "String"
+            },
+            {
+              "name": "nextReview",
+              "class": "String"
+            },
+            {
+              "name": "reviewInterval",
+              "class": "Number"
+            },
+            {
+              "name": "createdAt",
+              "class": "String"
+            },
+            {
+              "name": "updatedAt",
+              "class": "String"
+            },
+            {
+              "name": "__v",
+              "class": "Number"
+            }
+          ],
+          "value": "{\n  _id: '663767f69d559f2e85531c13',\n  user_id: '66364e10f1937d06d10d9fea',\n  word: 'aberrant',\n  sentence: [\n    'His aberrant behavior at the party shocked everyone.',\n    'aberration is for the weak',\n    'Wokie aberration kaii kawa eagjdpomp afm okdmf aokfa hr h',\n    'sg sd gerd gs s ',\n    'New Sentence'\n  ],\n  meaning: 'departing from an accepted standard',\n  lastSeenInContext: '2024-05-10T19:07:53.138Z',\n  context: [\n    'ChatGPT',\n    'woke.wokiewokie',\n    'enthgofka.gohkodp.co.th asogmr maspf,s gh g',\n    ' d dg ',\n    'New Context'\n  ],\n  lastReviewed: '2024-05-09T11:38:00.247Z',\n  nextReview: '2024-05-16T11:38:00.247Z',\n  reviewInterval: 6,\n  createdAt: '2024-05-05T11:05:26.253Z',\n  updatedAt: '2024-05-10T19:07:53.138Z',\n  __v: 0\n}",
+          "object_id": 20
+        }
+      },
+      "id": 6,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 0.0476128999980574
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.21.1",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v18.16.0"
+    },
+    "app": "backend-api",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "GET /api/words/663767f69d559f2e85531c13 (200) — 2024-05-12T10:57:29.829Z"
+  },
+  "classMap": [
+    {
+      "name": "mongodb",
+      "type": "package",
+      "children": [
+        {
+          "type": "class",
+          "name": "words",
+          "children": [
+            {
+              "type": "function",
+              "name": "find",
+              "static": false,
+              "location": "mongodb/words:4"
+            },
+            {
+              "type": "function",
+              "name": "findOne",
+              "static": false,
+              "location": "mongodb/words:5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /:id"
+        }
+      ]
+    }
+  ]
+}

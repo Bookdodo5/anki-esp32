@@ -1,0 +1,77 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/api/words",
+        "request_method": "GET",
+        "headers": {
+          "Accept": "*/*",
+          "Cache-Control": "no-cache",
+          "User-Agent": "Flashpost",
+          "Accept-Encoding": "gzip, deflate",
+          "Connection": "keep-alive",
+          "Host": "localhost:5001"
+        },
+        "protocol": "HTTP/1.1"
+      },
+      "id": 1,
+      "thread_id": 0
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 401,
+        "headers": {
+          "X-Powered-By": "Express",
+          "Access-Control-Allow-Origin": "http://localhost:5173",
+          "Vary": "Origin",
+          "Access-Control-Allow-Credentials": "true",
+          "Content-Security-Policy": "default-src 'none'",
+          "X-Content-Type-Options": "nosniff",
+          "Content-Type": "text/html; charset=utf-8",
+          "Content-Length": "1295"
+        },
+        "return_value": {
+          "class": "[ResponseBody]",
+          "value": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Error: No token found<br> &nbsp; &nbsp;at D:\\LEARN STUFF\\NODE\\anki-esp32\\functions\\middleware\\validateTokenHandler.js:16:11<br> &nbsp; &nbsp;at asyncUtilWrap (D:\\LEARN STUFF\\NODE\\anki-esp32\\node_modules\\express-async-handler\\index.js:3:20)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (D:\\LEARN STUFF\\NODE\\anki-esp32\\node_modules\\express\\lib\\router\\layer.js:95:5)<br> &nbsp; &nbsp;at trim_prefix (D:\\LEARN STUFF\\NODE\\anki-esp32\\node_modules\\express\\lib\\router\\index.js:328:13)<br> &nbsp; &nbsp;at D:\\LEARN STUFF\\NODE\\anki-esp32\\node_modules\\express\\lib\\router\\index.js:286:9<br> &nbsp; &nbsp;at Function.process_params (D:\\LEARN STUFF\\NODE\\anki-esp32\\node_modules\\express\\lib\\router\\index.js:346:12)<br> &nbsp; &nbsp;at next (D:\\LEARN STUFF\\NODE\\anki-esp32\\node_modules\\express\\lib\\router\\index.js:280:10)<br> &nbsp; &nbsp;at Function.handle (D:\\LEARN STUFF\\NODE\\anki-esp32\\node_modules\\express\\lib\\router\\index.js:175:3)<br> &nbsp; &nbsp;at router (D:\\LEARN STUFF\\NODE\\anki-esp32\\node_modules\\express\\lib\\router\\index.js:47:12)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (D:\\LEARN STUFF\\NODE\\anki-esp32\\node_modules\\express\\lib\\router\\layer.js:95:5)</pre>\n</body>\n</html>\n"
+        }
+      },
+      "id": 2,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 0.0152498999996169
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.21.1",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v18.16.0"
+    },
+    "app": "backend-api",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "GET /api/words (401) — 2024-05-12T10:49:27.393Z"
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /api/words"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /:id",
+    "parameters": "(id,email,password)",
+    "status": 200
+  }
+]

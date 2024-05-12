@@ -1,0 +1,6 @@
+[
+  {
+    "caller": "GET /search/:word",
+    "callee": "mongodb/words"
+  }
+]

@@ -1,0 +1,158 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/api/words/",
+        "request_method": "GET",
+        "headers": {
+          "Accept": "*/*",
+          "Content-Type": "application/json",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEiLCJlbWFpbCI6ImJvb2tkb2RvMUBnbWFpbC5jb20iLCJpZCI6IjY2MzY0ZTEwZjE5MzdkMDZkMTBkOWZlYSIsImlhdCI6MTcxNTUxMTQyMn0.9ExSuTjtIEe376Y_mId_cSLHAN3-CDx5_nhrO6hEm1A",
+          "Cache-Control": "no-cache",
+          "User-Agent": "Flashpost",
+          "Accept-Encoding": "gzip, deflate",
+          "Connection": "keep-alive",
+          "Content-Length": "60",
+          "Host": "localhost:5001"
+        },
+        "protocol": "HTTP/1.1",
+        "normalized_path_info": "/"
+      },
+      "id": 1,
+      "thread_id": 0,
+      "message": [
+        {
+          "name": "email",
+          "class": "String",
+          "value": "'bookdodo1@gmail.com'"
+        },
+        {
+          "name": "password",
+          "class": "String",
+          "value": "'1'"
+        }
+      ]
+    },
+    {
+      "event": "call",
+      "id": 2,
+      "thread_id": 0,
+      "method_id": "find",
+      "static": false,
+      "receiver": {
+        "class": "Collection",
+        "value": "[Collection words]",
+        "object_id": 12
+      },
+      "parameters": [
+        {
+          "class": "Object",
+          "properties": [
+            {
+              "name": "user_id",
+              "class": "ObjectId"
+            }
+          ],
+          "value": "{ user_id: ObjectId { buffer: [Buffer [Uint8Array]] } }",
+          "object_id": 13,
+          "name": "filter"
+        },
+        {
+          "class": "Object",
+          "properties": [],
+          "value": "{}",
+          "object_id": 14,
+          "name": "options"
+        }
+      ],
+      "defined_class": "words",
+      "lineno": 4,
+      "path": "mongodb/words"
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 3,
+      "parent_id": 2,
+      "return_value": {
+        "class": "FindCursor",
+        "value": "[FindCursor anki-esp32-backend.words]",
+        "object_id": 15
+      },
+      "elapsed": 0.00047510000149486586
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "X-Powered-By": "Express",
+          "Access-Control-Allow-Origin": "http://localhost:5173",
+          "Vary": "Origin",
+          "Access-Control-Allow-Credentials": "true",
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "23191",
+          "Etag": "W/\"5a97-REGoqL3vUyqXuYdD/SH8Ijiyhb0\""
+        },
+        "return_value": {
+          "class": "[ResponseBody]",
+          "value": "[{\"_id\":\"663767f69d559f2e85531c13\",\"user_id\":\"66364e10f1937d06d10d9fea\",\"word\":\"aberrant\",\"sentence\":[\"His aberrant behavior at the party shocked everyone.\",\"aberration is for the weak\",\"Wokie aberration kaii kawa eagjdpomp afm okdmf aokfa hr h\",\"sg sd gerd gs s \",\"New Sentence\"],\"meaning\":\"departing from an accepted standard\",\"lastSeenInContext\":\"2024-05-10T19:07:53.138Z\",\"context\":[\"ChatGPT\",\"woke.wokiewokie\",\"enthgofka.gohkodp.co.th asogmr maspf,s gh g\",\" d dg \",\"New Context\"],\"lastReviewed\":\"2024-05-09T11:38:00.247Z\",\"nextReview\":\"2024-05-16T11:38:00.247Z\",\"reviewInterval\":6,\"createdAt\":\"2024-05-05T11:05:26.253Z\",\"updatedAt\":\"2024-05-10T19:07:53.138Z\",\"__v\":0},{\"_id\":\"663767fe9d559f2e85531c15\",\"user_id\":\"66364e10f1937d06d10d9fea\",\"word\":\"acerbic\",\"sentence\":[\"Her acerbic remarks often offended people.\"],\"meaning\":\"sharp and forthright\",\"lastSeenInContext\":\"2024-05-05T11:05:34.119Z\",\"context\":[\"ChatGPT\"],\"lastReviewed\":\"2024-05-12T07:08:58.136Z\",\"nextReview\":\"2024-05-19T07:08:58.136Z\",\"reviewInterval\":6,\"createdAt\":\"2024-05-05T11:05:34.121Z\",\"updatedAt\":\"2024-05-12T07:08:58.137Z\",\"__v\":0},{\"_id\":\"663768029d559f2e85531c17\",\"user_id\":\"66364e10f1937d06d10d9fea\",\"word\":\"anachronistic\",\"sentence\":[\"The use of floppy disks seems anachronistic in today's digital age.\"],\"meaning\":\"belonging to a different time period\",\"lastSeenInContext\":\"2024-05-05T11:05:38.688Z\",\"context\":[\"ChatGPT\"],\"lastReviewed\":\"2024-05-09T12:36:23.936Z\",\"nextReview\":\"2024-05-16T12:36:23.936Z\",\"reviewInterval\":6,\"createdAt\":\"2024-05-05T11:05:38.689Z\",\"updatedAt\":\"2024-05-09T12:36:23.936Z\",\"__v\":0},{\"_id\":\"663768079d559f2e85531c19\",\"user_id\":\"66364e10f1937d06d10d9fea\",\"word\":\"capricious\",\"sentence\":[\"His capricious decisions made it hard for the team to predict his actions.\"],\"meaning\":\"given to sudden and unaccountable changes of mood or behavior\",\"lastSeenInContext\":\"2024-05-05T11:05:43.676Z\",\"context\":[\"ChatGPT\"],\"lastReviewed\":\"2024-05-08T12:08:45.571Z\",\"nextReview\":\"2024-06-07T12:08:45.571Z\",\"reviewInterval\":7,\"createdAt\":\"2024-05-05T11:05:43.677Z\",\"updatedAt\":\"2024-05-08T12:08:45.571Z\",\"__v\":0},{\"_id\":\"6637680f9d559f2e85531c1b\",\"user_id\":\"66364e10f1937d06d10d9fea\",\"word\":\"deleterious\",\"sentence\":[\"The deleterious effects of smoking are well-documented.\"],\"meaning\":\"causing harm or damage\",\"lastSeenInContext\":\"2024-05-05T11:05:51.954Z\",\"context\":[\"ChatGPT\"],\"lastReviewed\":\"2024-05-08T12:21:40.108Z\",\"nextReview\":\"2024-06-07T12:21:40.108Z\",\"reviewInterval\":7,\"createdAt\":\"2024-05-05T11:05:51.955Z\",\"updatedAt\":\"2024-05-08T12:21:40.108Z\",\"__v\":0},{\"_id\":\"663768149d559f2e85531c1e\",\"user_id\":\"66364e10f1937d06d10d9fea\",\"word\":\"egregious\",\"sentence\":[\"The company's egregious mistake cost them millions of dollars.\"],\"meaning\":\"outstandingly bad; shocking\",\"lastSeenInContext\":\"2024-05-05T11:05:56.485Z\",\"context\":[\"ChatGPT\"],\"lastReviewed\":\"2024-05-09T12:22:04.107Z\",\"nextReview\":\"2024-05-16T12:22:04.107Z\",\"reviewInterval\":6,\"createdAt\":\"2024-05-05T11:05:56.486Z\",\"updatedAt\":\"2024-05-09T12:22:04.107Z\",\"__v\":0},{\"_id\":\"663768199d559f2e85531c20\",\"user_id\":\"66364e10f1937d06d10d9fea\",\"word\":\"fastidious\",\"sentence\":[\"She was fastidious about keeping her house clean.\"],\"meaning\":\"very attentive to and concerned about accuracy and detail\",\"lastSeenInContext\":\"2024-05-05T11:06:01.778Z\",\"context\":[\"ChatGPT\"],\"lastReviewed\":\"2024-05-09T12:22:09.760Z\",\"nextReview\":\"2024-05-16T12:22:09.760Z\",\"reviewInterval\":6,\"createdAt\":\"2024-05-05T11:06:01.778Z\",\"updatedAt\":\"2024-05-09T12:22:09.760Z\",\"__v\":0},{\"_id\":\"6637681d9d559f2e85531c22\",\"user_id\":\"66364e10f1937d06d10d9fea\",\"word\":\"garrulous\",\"sentence\":[\"The garrulous old man talked for hours without pause.\"],\"meaning\":\"excessively talkative\",\"lastSeenInContext\":\"2024-05-05T11:06:05.412Z\",\"context\":[\"ChatGPT\"],\"lastReviewed\":\"2024-05-09T12:24:06.170Z\",\"nextReview\":\"2024-05-16T12:24:06.169Z\",\"reviewInterval\":6,\"createdAt\":\"2024-05-05T11:06:05.413Z\",\"updatedAt\":\"2024-05-09T12:24:06.170Z\",\"__v\":0},{\"_id\":\"663768219d559f2e85531c24\",\"user_id\":\"66364e10f1937d06d10d9fea\",\"word\":\"iconoclast\",\"sentence\":[\"He was considered an iconoclast for challenging traditional beliefs.\"],\"meaning\":\"a person who attacks or criticizes cherished beliefs\",\"lastSeenInContext\":\"2024-05-05T11:06:09.507Z\",\"context\":[\"ChatGPT\"],\"lastReviewed\":\"2024-05-09T12:24:12.607Z\",\"nextReview\":\"2024-05-16T12:24:12.607Z\",\"reviewInterval\":6,\"createdAt\":\"2024-05-05T11:06:09.508Z\",\"updatedAt\":\"2024-05-09T12:24:12.607Z\",\"__v\":0},{\"_id\":\"663768269d559f2e85531c26\",\"user_id\":\"66364e10f1937d06d10d9fea\",\"word\":\"jejune\",\"sentence\":[\"The book offered only jejune observations on the topic.\"],\"meaning\":\"naive, simplistic, and superficial\",\"lastSeenInContext\":\"2024-05-05T11:06:14.833Z\",\"context\":[\"ChatGPT\"],\"lastReviewed\":\"2024-05-09T12:24:25.024Z\",\"nextReview\":\"2024-05-16T12:24:25.024Z\",\"reviewInterval\":6,\"createdAt\":\"2024-05-05T11:06:14.834Z\",\"updatedAt\":\"2024-05-09T12:24:25.024Z\",\"__v\":0},{\"_id\":\"6637682b9d559f2e85531c28\",\"user_id\":\"66364e10f1937d06d10d9fea\",\"word\":\"languid\",\"sentence\":[\"She lay in a languid state after a long day at work.\"],\"meaning\":\"displaying or having a disinclination for physical exertion or effort; slow and relaxed\",\"lastSeenInContext\":\"2024-05-05T11:06:19.224Z\",\"context\":[\"ChatGPT\"],\"lastReviewed\":\"2024-05-06T11:22:51.013Z\",\"nextReview\":\"2024-05-13T11:22:51.013Z\",\"reviewInterval\":6,\"createdAt\":\"2024-05-05T11:06:19.225Z\",\"updatedAt\":\"2024-05-06T11:22:51.014Z\",\"__v\":0},{\"_id\":\"663768309d559f2e85531c2a\",\"user_id\":\"66364e10f1937d06d10d9fea\",\"word\":\"magnanimous\",\"sentence\":[\"His magnanimous gesture won him the admiration of his colleagues.\"],\"meaning\":\"very generous or forgiving, especially toward a rival or someone less powerful than oneself\",\"lastSeenInContext\":\"2024-05-05T11:06:24.550Z\",\"context\":[\"ChatGPT\"],\"lastReviewed\":\"2024-05-09T12:27:19.794Z\",\"nextReview\":\"2024-05-16T12:27:19.794Z\",\"reviewInterval\":6,\"createdAt\":\"2024-05-05T11:06:24.551Z\",\"updatedAt\":\"2024-05-09T12:27:19.795Z\",\"__v\":0},{\"_id\":\"663768349d559f2e85531c2c\",\"user_id\":\"66364e10f1937d06d10d9fea\",\"word\":\"nebulous\",\"sentence\":[\"The instructions were nebulous and difficult to follow.\"],\"meaning\":\"unclear, vague, or ill-defined\",\"lastSeenInContext\":\"2024-05-05T11:06:28.712Z\",\"context\":[\"ChatGPT\"],\"lastReviewed\":\"2024-05-09T12:25:04.540Z\",\"nextReview\":\"2024-05-16T12:25:04.540Z\",\"reviewInterval\":6,\"createdAt\":\"2024-05-05T11:06:28.713Z\",\"updatedAt\":\"2024-05-09T12:25:04.541Z\",\"__v\":0},{\"_id\":\"663768389d559f2e85531c2e\",\"user_id\":\"66364e10f1937d06d10d9fea\",\"word\":\"obsequious\",\"sentence\":[\"The waiter's obsequious behavior towards the wealthy patrons was evident.\"],\"meaning\":\"obedient or attentive to an excessive or servile degree\",\"lastSeenInContext\":\"2024-05-05T11:06:32.910Z\",\"context\":[\"ChatGPT\"],\"lastReviewed\":\"2024-05-09T12:25:09.406Z\",\"nextReview\":\"2024-05-16T12:25:09.406Z\",\"reviewInterval\":6,\"createdAt\":\"2024-05-05T11:06:32.911Z\",\"updatedAt\":\"2024-05-09T12:25:09.407Z\",\"__v\":0},{\"_id\":\"6637683d9d559f2e85531c30\",\"user_id\":\"66364e10f1937d06d10d9fea\",\"word\":\"parsimonious\",\"sentence\":[\"His parsimonious habits meant he never spent money unnecessarily.\"],\"meaning\":\"unwilling to spend money or use resources; stingy or frugal\",\"lastSeenInContext\":\"2024-05-05T11:06:37.071Z\",\"context\":[\"ChatGPT\"],\"lastReviewed\":\"2024-05-09T12:25:15.448Z\",\"nextReview\":\"2024-05-16T12:25:15.448Z\",\"reviewInterval\":6,\"createdAt\":\"2024-05-05T11:06:37.072Z\",\"updatedAt\":\"2024-05-09T12:25:15.448Z\",\"__v\":0},{\"_id\":\"663768429d559f2e85531c32\",\"user_id\":\"66364e10f1937d06d10d9fea\",\"word\":\"querulous\",\"sentence\":[\"The querulous tone of her voice annoyed everyone around her.\"],\"meaning\":\"complaining in a petulant or whining manner\",\"lastSeenInContext\":\"2024-05-05T11:06:42.622Z\",\"context\":[\"ChatGPT\"],\"lastReviewed\":\"2024-05-09T12:26:35.399Z\",\"nextReview\":\"2024-05-16T12:26:35.399Z\",\"reviewInterval\":6,\"createdAt\":\"2024-05-05T11:06:42.623Z\",\"updatedAt\":\"2024-05-09T12:26:35.399Z\",\"__v\":0},{\"_id\":\"663768469d559f2e85531c34\",\"user_id\":\"66364e10f1937d06d10d9fea\",\"word\":\"reproach\",\"sentence\":[\"She looked at him with reproach after he broke his promise.\"],\"meaning\":\"to express disapproval or disappointment\",\"lastSeenInContext\":\"2024-05-05T11:06:46.633Z\",\"context\":[\"ChatGPT\"],\"lastReviewed\":\"2024-05-08T12:11:31.184Z\",\"nextReview\":\"2024-06-07T12:11:31.184Z\",\"reviewInterval\":7,\"createdAt\":\"2024-05-05T11:06:46.634Z\",\"updatedAt\":\"2024-05-08T12:11:31.185Z\",\"__v\":0},{\"_id\":\"6637684a9d559f2e85531c36\",\"user_id\":\"66364e10f1937d06d10d9fea\",\"word\":\"sanguine\",\"sentence\":[\"Despite the setbacks, he remained sanguine about the future.\"],\"meaning\":\"optimistic, especially in difficult situations\",\"lastSeenInContext\":\"2024-05-05T11:06:50.707Z\",\"context\":[\"ChatGPT\"],\"lastReviewed\":\"2024-05-09T12:26:41.436Z\",\"nextReview\":\"2024-05-16T12:26:41.436Z\",\"reviewInterval\":6,\"createdAt\":\"2024-05-05T11:06:50.708Z\",\"updatedAt\":\"2024-05-09T12:26:41.437Z\",\"__v\":0},{\"_id\":\"663768509d559f2e85531c38\",\"user_id\":\"66364e10f1937d06d10d9fea\",\"word\":\"taciturn\",\"sentence\":[\"His taciturn nature made it difficult for others to get to know him.\"],\"meaning\":\"reserved or uncommunicative in speech; saying little\",\"lastSeenInContext\":\"2024-05-05T11:06:56.113Z\",\"context\":[\"ChatGPT\"],\"lastReviewed\":\"2024-05-09T12:23:59.935Z\",\"nextReview\":\"2024-05-16T12:23:59.935Z\",\"reviewInterval\":6,\"createdAt\":\"2024-05-05T11:06:56.114Z\",\"updatedAt\":\"2024-05-09T12:23:59.936Z\",\"__v\":0},{\"_id\":\"663878c3d53e86d5e62f9b48\",\"user_id\":\"66364e10f1937d06d10d9fea\",\"word\":\"veracity\",\"sentence\":[\"Her veracity was unquestionable; she always spoke the truth.\"],\"meaning\":\"habitual truthfulness\",\"lastSeenInContext\":\"2024-05-06T06:29:23.982Z\",\"context\":[\"ChatGPT\"],\"lastReviewed\":\"2024-05-10T13:57:12.195Z\",\"nextReview\":\"2024-05-17T13:57:12.195Z\",\"reviewInterval\":6,\"createdAt\":\"2024-05-06T06:29:23.988Z\",\"updatedAt\":\"2024-05-10T13:57:12.196Z\",\"__v\":0},{\"_id\":\"663878c8d53e86d5e62f9b4a\",\"user_id\":\"66364e10f1937d06d10d9fea\",\"word\":\"wanton\",\"sentence\":[\"The wanton destruction of the forest outraged environmentalists.\",\"wanton\"],\"meaning... (13191 more characters)"
+        }
+      },
+      "id": 4,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 0.11260459999903105
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.21.1",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v18.16.0"
+    },
+    "app": "backend-api",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "GET /api/words/ (200) — 2024-05-12T10:57:26.153Z"
+  },
+  "classMap": [
+    {
+      "name": "mongodb",
+      "type": "package",
+      "children": [
+        {
+          "type": "class",
+          "name": "words",
+          "children": [
+            {
+              "type": "function",
+              "name": "find",
+              "static": false,
+              "location": "mongodb/words:4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /"
+        }
+      ]
+    }
+  ]
+}

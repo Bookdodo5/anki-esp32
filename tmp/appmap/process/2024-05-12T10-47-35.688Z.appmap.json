@@ -1,0 +1,65 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "id": 1,
+      "thread_id": 0,
+      "method_id": "connectDb",
+      "static": true,
+      "defined_class": "dbConnection",
+      "path": "functions\\config\\dbConnection.js",
+      "lineno": 3
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 2,
+      "parent_id": 1,
+      "return_value": {
+        "class": "Promise",
+        "value": "Promise { <pending> }",
+        "object_id": 1
+      },
+      "elapsed": 0.02983189999940805
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.21.1",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v18.16.0"
+    },
+    "app": "backend-api",
+    "recorder": {
+      "type": "process",
+      "name": "process"
+    },
+    "name": "2024-05-12T10:47:35.688Z"
+  },
+  "classMap": [
+    {
+      "name": "config",
+      "type": "package",
+      "children": [
+        {
+          "type": "class",
+          "name": "dbConnection",
+          "children": [
+            {
+              "type": "function",
+              "name": "connectDb",
+              "static": true,
+              "location": "functions\\config\\dbConnection.js:3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
